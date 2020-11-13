@@ -26,4 +26,10 @@ const interval = setInterval(() => {
         <div><span> ${minutes} minutes</span></div>
         <div><span> ${seconds} seconds</span></div>
     `;
+
+    if(timeLeft < 0) {
+        clearInterval(interval);
+        countdown.innerHTMl = "Started!";
+    }
+
 }, 1000);
